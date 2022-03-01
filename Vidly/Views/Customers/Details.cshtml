@@ -5,4 +5,12 @@
 }
 
 <h2>@Model.Name</h2>
+<ul>
+    <li>Membership Type: @Model.MembershipType.Name</li>
+    @if (Model.Birthday.ToShortDateString() != "1/1/1900")
+    {
+        <li>Birthday: @Model.Birthday.ToShortDateString()</li>
+    }
+
+</ul>
 
