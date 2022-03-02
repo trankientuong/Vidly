@@ -5,6 +5,7 @@
 }
 
 <h2>Customers</h2>
+<a href="@Url.Action("Create","Customers")" class="btn btn-info">Create New</a>
 
 <table class="table	table-bordered	table-hover">
     <tr>
@@ -23,7 +24,7 @@
         foreach (var customer in Model)
         {
             <tr>
-                <td><a href="@Url.Action("Details",new {id = customer.Id })">@customer.Name</a></td>
+                <td><a href="@Url.Action("Edit",new {id = customer.Id })">@customer.Name</a></td>
                 <td>@customer.MembershipType.Name</td>
             </tr>
         }
