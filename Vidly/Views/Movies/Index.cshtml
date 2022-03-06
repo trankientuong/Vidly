@@ -5,7 +5,7 @@
 }
 
 <h2>Movies</h2>
-
+<a href="@Url.Action("Create","Movies")" class="btn btn-info">Create new</a>
 <table class="table	table-bordered	table-hover">
     <tr>
         <th style="font-weight:bold">Movies</th>
@@ -23,7 +23,7 @@
         foreach (var movie in Model)
         {
             <tr>
-                <td><a href="@Url.Action("Details",new {id = movie.Id })">@movie.Name</a></td>
+                <td><a href="@Url.Action("Edit",new {id = movie.Id })">@movie.Name</a></td>
                 <td>@movie.Genre.Name</td>
             </tr>
         }
