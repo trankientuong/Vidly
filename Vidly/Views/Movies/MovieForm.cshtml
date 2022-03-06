@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>@((Model.Id == 0) ? "Create" : "Edit")</h2>
+<h2>@Model.Title</h2>
 
 @using (Html.BeginForm("CreateAndUpdate", "Movies", FormMethod.Post))
 {
